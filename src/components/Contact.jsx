@@ -11,20 +11,20 @@ const METHODS = [
   {
     icon: <FaEnvelope />,
     label: "Email",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
+    value: "jabesiabwe@gmail.com",
+    href: "mailto:jabesiabwe@gmail.com",
   },
   {
     icon: <FaGithub />,
     label: "GitHub",
-    value: "github.com/your-profile",
-    href: "https://github.com/",
+    value: "github.com/ja00069-Git",
+    href: "https://github.com/ja00069-Git",
   },
   {
     icon: <FaLinkedin />,
     label: "LinkedIn",
-    value: "linkedin.com/in/your-profile",
-    href: "https://linkedin.com/",
+    value: "linkedin.com/in/abwe-jabesi",
+    href: "https://linkedin.com/in/abwe-jabesi",
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -78,7 +78,7 @@ function Contact() {
           </ul>
 
           <motion.a
-            href="https://example.com/resume.pdf"
+            href="https://drive.google.com/file/d/1D1Xc-5dWOc8AmAp0bruYbGzfJUjN2uMV/view?usp=drive_link"
             className="contact-cta"
             target="_blank"
             rel="noreferrer"

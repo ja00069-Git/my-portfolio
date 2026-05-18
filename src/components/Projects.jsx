@@ -5,40 +5,49 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
 
   const featuredProject = {
-    title: "JobHuntHQ",
-    subtitle: "Full-Stack Job Application Tracker",
+    title: "Job Seekers Hub",
+    subtitle: "Job Search Management Platform",
 
     description:
-      "A modern platform for managing job applications, interview pipelines, and job search analytics with a scalable backend architecture.",
+      "Built and shipped a full-stack job search platform that tracks applications, imports hiring emails, and keeps resumes and companies organized.",
 
     highlights: [
-      "Track applications, interviews, and job search analytics",
-      "REST API designed for scalability",
-      "Clean developer-focused UI"
+      "Implemented Gmail import flow for hiring emails",
+      "Built drag-and-drop application stage tracking",
+      "Shipped dashboard metrics for pipeline visibility"
     ],
 
     metrics: [
-      "REST API architecture",
-      "Containerized services",
-      "Modular backend design"
+      "Pipeline visibility",
+      "Stage tracking",
+      "User-scoped data"
     ],
 
     architecture: [
-      "REST API",
-      "Service Layer",
-      "Containerized Deployment"
+      "Full-Stack Build",
+      "Auth + Email Import",
+      "Relational Data Model"
     ],
 
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
 
-    tech: ["React", "Node.js", "PostgreSQL", "Docker"],
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "NextAuth",
+      "Gmail API",
+      "Vercel",
+    ],
 
-    status: "In Progress",
+    status: "Shipped",
 
-    github: "https://github.com/your-profile/jobhunthq",
+    github: "https://github.com/ja00069-Git/jobseekershub",
 
-    demo: "https://example.com/jobhunthq"
+    demo: "https://jobseekershub.vercel.app/"
   };
 
 
@@ -170,8 +179,8 @@ export default function Projects() {
         </h2>
 
         <p className="projects-intro">
-          Systems and platforms I've engineered while building expertise in
-          backend architecture, distributed systems, and scalable applications.
+          Shipped projects that show product thinking, full-stack ownership, and
+          the ability to build polished, production-ready applications.
         </p>
 
       </div>

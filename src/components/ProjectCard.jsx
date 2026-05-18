@@ -12,6 +12,7 @@ import {
   FaNetworkWired,
   FaGithub,
   FaExternalLinkAlt,
+  FaKey,
 } from "react-icons/fa";
 
 import {
@@ -21,6 +22,10 @@ import {
   SiMongodb,
   SiMysql,
   SiJavascript,
+  SiNextdotjs,
+  SiPrisma,
+  SiVercel,
+  SiGmail,
 } from "react-icons/si";
 
 import "../components_css/Projects.css";
@@ -28,8 +33,13 @@ import "../components_css/Projects.css";
 
 const techIcons = {
   React: <FaReact />,
+  "Next.js": <SiNextdotjs />,
   "Node.js": <FaNodeJs />,
   PostgreSQL: <SiPostgresql />,
+  Prisma: <SiPrisma />,
+  NextAuth: <FaKey />,
+  "Gmail API": <SiGmail />,
+  Vercel: <SiVercel />,
   Docker: <FaDocker />,
   Java: <FaJava />,
   Multithreading: <FaMicrochip />,
