@@ -1,84 +1,52 @@
 # Jabesi Portfolio
 
-Modern portfolio built with React and Vite, focused on backend architecture, scalable systems, and full-stack project showcases.
+A high-performance, accessible developer portfolio demonstrating full-stack React expertise, thoughtful UX/accessibility practices, and scalable component architecture. Built with modern tooling (React 19, Vite 7) and deployed on Vercel with zero-friction CI/CD.
 
-## Stack
+**What this shows:** client-side SPA patterns, performance-conscious animation, semantic HTML, responsive design, and attention to user accessibility (reduced-motion support, focus management, SEO).
 
-- React 19
-- Vite 7
-- Framer Motion
-- React Icons
-- CSS modules by section/component
+## Design & implementation approach
 
-## Features
+This portfolio prioritizes **performance**, **accessibility**, and **user experience**:
 
-- Multi-page style navigation with History API routes
-- Animated hero, section reveals, and interactive project card tilt
-- Filterable skills section with animated transitions
-- Responsive layout and accessible focus styles
-- Reduced-motion support for motion-sensitive users
+- **Single-Page Navigation** using History API for fast, frameless transitions
+- **Lazy-loaded animations** with Framer Motion to minimize repaints and respect user motion preferences
+- **Component-driven architecture** for reusability and maintainability
+- **SEO-ready** with dynamic meta tags, canonical URLs, and Open Graph support
+- **Mobile-first responsive design** that scales from 320px to 4K
+- **Semantic HTML** and focus management for screen reader users
 
-## Project Structure
+## Key technical highlights
 
-- src/components: reusable UI blocks
-- src/pages: route-level page wrappers
-- src/components_css: section and component styles
-- src/data: content datasets
+- **Performance:** Vite's optimized build pipeline, tree-shaking unused code, lazy CSS modules
+- **Accessibility:** WCAG 2.1 compliance mindset, reduced-motion support, keyboard navigation, semantic landmarks
+- **Code quality:** React best practices (hooks, event cleanup, state isolation), component composition patterns
+- **Deployment:** Automated CI/CD via Vercel; zero manual deployment friction
+- **Developer experience:** Hot Module Replacement for instant feedback loop, ESLint config for consistency
+- **SEO:** Dynamic page titles, canonical URLs, OG metadata for social sharing
 
-## Getting Started
+## Main pages
 
-1. Install dependencies:
+| Route | What it shows |
+| --- | --- |
+| `/` | Home page with hero and primary portfolio highlights |
+| `/projects` | Project showcase and project cards |
+| `/skills` | Skills and technology overview |
+| `/about` | Personal profile and professional background |
+| `/contact` | Contact section and outreach details |
 
-   npm install
+## Core sections
 
-2. Start development server:
+- **Hero** - first-screen intro and personal branding
+- **Projects** - selected builds, summaries, and links
+- **Skills** - technical capabilities grouped for clarity
+- **About** - background, focus areas, and strengths
+- **Contact** - direct channels for collaboration or hiring
 
-   npm run dev
+## Tech stack
 
-3. Build for production:
-
-   npm run build
-
-4. Preview production build:
-
-   npm run preview
-
-## Customization
-
-- Update personal/project content in src/components and src/data
-- Update theme tokens in src/index.css
-- Update page metadata in index.html
-
-## Performance Notes
-
-- Pointer-driven effects use Framer Motion values and springs to reduce rerender overhead
-- Images use lazy loading where applicable
-- Reduced-motion preferences are respected globally
-
-## Deployment
-
-Build output is generated in dist and can be deployed to any static host such as Vercel, Netlify, or GitHub Pages.
-
-### GitHub Pages (Automated)
-
-This project includes a workflow at `.github/workflows/deploy.yml` that deploys on each push to `main`.
-
-1. Initialize and commit locally:
-
-   git init
-   git branch -M main
-   git add .
-   git commit -m "Initial portfolio setup"
-
-2. Create an empty GitHub repository and connect it:
-
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   git push -u origin main
-
-3. In GitHub, open Settings > Pages and ensure Source is set to GitHub Actions.
-
-4. Push to `main` to trigger deployment. Your site will publish automatically when the workflow succeeds.
-
-The workflow automatically sets the correct Vite base path for both:
-- `<username>.github.io` (root path `/`)
-- project repositories (path `/<repo>/`)
+- **React 19** – component-driven UI with hooks
+- **Vite 7** – fast build tooling with excellent dev experience
+- **Framer Motion** – GPU-accelerated animations respecting user preferences
+- **React Icons** – lightweight icon library
+- **CSS Modules** – scoped, maintainable styles by section
+- **Vercel** – modern hosting with auto-deploy on every push
