@@ -55,6 +55,7 @@ const techIcons = {
 
 
 export default function ProjectCard({ project, index, featured }) {
+  const isUpcoming = Boolean(project.upcoming);
   const cardRef = useRef(null);
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
@@ -79,6 +80,7 @@ export default function ProjectCard({ project, index, featured }) {
   return (
     /* Scroll-reveal wrapper */
     <motion.div
+      className="project-card-shell"
       initial={{ opacity: 0, y: 48 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -87,24 +89,31 @@ export default function ProjectCard({ project, index, featured }) {
     {/* 3-D tilt wrapper */}
     <motion.div
       ref={cardRef}
-      className={`project-card ${featured ? "featured" : ""}`}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      className={`project-card ${featured ? "featured" : ""} ${isUpcoming ? "project-card-ghost" : ""}`}
+      onMouseMove={isUpcoming ? undefined : handleMouseMove}
+      onMouseLeave={isUpcoming ? undefined : handleMouseLeave}
       style={{
         transformStyle: "preserve-3d",
         height: "100%",
-        rotateX: smoothRotateX,
-        rotateY: smoothRotateY,
+        rotateX: isUpcoming ? 0 : smoothRotateX,
+        rotateY: isUpcoming ? 0 : smoothRotateY,
       }}
     >
 
       <div className="project-card-image">
-
-        <img
-          src={project.image}
-          alt={project.title}
-          loading="lazy"
-        />
+        {isUpcoming ? (
+          <div className="ghost-image" aria-hidden="true">
+            <span className="ghost-image-pill" />
+            <span className="ghost-image-line" />
+            <span className="ghost-image-line short" />
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+          />
+        )}
 
       </div>
 
@@ -128,9 +137,17 @@ export default function ProjectCard({ project, index, featured }) {
 
         <ul className="project-highlights">
 
-          {project.highlights?.slice(0,3).map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
+          {isUpcoming ? (
+            <>
+              <li className="ghost-text-line" />
+              <li className="ghost-text-line" />
+              <li className="ghost-text-line short" />
+            </>
+          ) : (
+            project.highlights?.slice(0,3).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))
+          )}
 
         </ul>
 
@@ -138,17 +155,25 @@ export default function ProjectCard({ project, index, featured }) {
 
         <div className="tech-stack">
 
-          {project.tech.map((tech, i) => (
+          {isUpcoming ? (
+            <>
+              <span className="ghost-chip" />
+              <span className="ghost-chip" />
+              <span className="ghost-chip" />
+            </>
+          ) : (
+            project.tech.map((tech, i) => (
 
-            <span key={i}>
+              <span key={i}>
 
-              {techIcons[tech]}
+                {techIcons[tech]}
 
-              {tech}
+                {tech}
 
-            </span>
+              </span>
 
-          ))}
+            ))
+          )}
 
         </div>
 

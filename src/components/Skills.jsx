@@ -5,14 +5,12 @@ import "../components_css/Skills.css";
 import {
   FaNodeJs,
   FaReact,
-  FaDocker,
-  FaAws,
   FaDatabase,
   FaGitAlt,
   FaJava,
-  FaLinux,
   FaHtml5,
   FaCss3Alt,
+  FaKey,
 } from "react-icons/fa";
 
 import {
@@ -23,6 +21,10 @@ import {
   SiMongodb,
   SiDotnet,
   SiMysql,
+  SiNextdotjs,
+  SiPrisma,
+  SiGmail,
+  SiVercel,
 } from "react-icons/si";
 
 function TechStack() {
@@ -30,24 +32,24 @@ function TechStack() {
 
   const stack = [
     { icon: <FaReact />, name: "React", category: "Frontend" },
+    { icon: <SiNextdotjs />, name: "Next.js", category: "Frontend" },
     { icon: <SiJavascript />, name: "JavaScript", category: "Frontend" },
     { icon: <SiTypescript />, name: "TypeScript", category: "Frontend" },
     { icon: <FaHtml5 />, name: "HTML", category: "Frontend" },
     { icon: <FaCss3Alt />, name: "CSS", category: "Frontend" },
     { icon: <FaNodeJs />, name: "Node.js", category: "Backend" },
     { icon: <SiExpress />, name: "Express", category: "Backend" },
+    { icon: <FaKey />, name: "NextAuth", category: "Backend" },
+    { icon: <SiGmail />, name: "Gmail API", category: "Backend" },
     { icon: <FaJava />, name: "Java", category: "Backend" },
     { icon: <SiDotnet />, name: "ASP.NET", category: "Backend" },
     { icon: <FaDatabase />, name: "REST APIs", category: "Backend" },
     { icon: <SiPostgresql />, name: "PostgreSQL", category: "Databases" },
+    { icon: <SiPrisma />, name: "Prisma", category: "Databases" },
     { icon: <SiMongodb />, name: "MongoDB", category: "Databases" },
     { icon: <SiMysql />, name: "SQL Server", category: "Databases" },
-    { icon: <FaDatabase />, name: "Redis", category: "Databases" },
-    { icon: <FaDocker />, name: "Docker", category: "DevOps" },
-    { icon: <FaAws />, name: "AWS", category: "DevOps" },
+    { icon: <SiVercel />, name: "Vercel", category: "DevOps" },
     { icon: <FaGitAlt />, name: "Git", category: "DevOps" },
-    { icon: <FaLinux />, name: "Linux", category: "DevOps" },
-    { icon: <FaGitAlt />, name: "CI/CD", category: "DevOps" },
   ];
 
   const filters = useMemo(

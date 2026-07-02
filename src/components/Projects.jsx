@@ -124,44 +124,28 @@ export default function Projects() {
       github: "https://github.com/your-profile/project-management-system",
 
       demo: "https://example.com/project-management-system"
-    },
-
-    {
-      title: "AI Document Intelligence",
-      subtitle: "AI Document Processing Platform",
-
-      description:
-        "A system designed to extract structured information from documents and generate summaries using AI pipelines.",
-
-      highlights: [
-        "Document parsing pipeline",
-        "AI generated summaries",
-        "Batch document processing"
-      ],
-
-      metrics: [
-        "Automated document extraction",
-        "AI inference pipeline",
-        "Scalable backend processing"
-      ],
-
-      architecture: [
-        "AI Pipeline",
-        "Batch Processing",
-        "Service API"
-      ],
-
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80",
-
-      tech: ["Python", "FastAPI", "Docker", "AI"],
-
-      status: "Planned",
-
-      github: "https://github.com/your-profile/ai-document-intelligence",
-
-      demo: "https://example.com/ai-document-intelligence"
     }
+  ];
+
+  const upcomingProjects = [
+    {
+      title: "Stealth Build Alpha",
+      subtitle: "Upcoming Project",
+      description:
+        "A new product concept is currently in design and architecture discovery.",
+      tech: [],
+      status: "Coming Soon",
+      upcoming: true,
+    },
+    {
+      title: "Stealth Build Beta",
+      subtitle: "Upcoming Project",
+      description:
+        "Another portfolio slot reserved for an in-progress system planned for release.",
+      tech: [],
+      status: "Coming Soon",
+      upcoming: true,
+    },
   ];
 
 
@@ -205,6 +189,16 @@ export default function Projects() {
             key={index}
             project={project}
             index={index + 2}
+          />
+
+        ))}
+
+        {upcomingProjects.map((project, index) => (
+
+          <ProjectCard
+            key={`upcoming-${index}`}
+            project={project}
+            index={projects.length + index + 2}
           />
 
         ))}

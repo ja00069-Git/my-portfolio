@@ -50,3 +50,24 @@ This portfolio prioritizes **performance**, **accessibility**, and **user experi
 - **React Icons** – lightweight icon library
 - **CSS Modules** – scoped, maintainable styles by section
 - **Vercel** – modern hosting with auto-deploy on every push
+
+## Vercel deployment
+
+This repo is configured for Vercel static hosting with SPA rewrites for the custom History API routes.
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Framework preset: `Vite`
+- Route handling: [vercel.json](vercel.json) rewrites all app routes to `index.html`
+
+### Launch checklist
+
+1. Push the repository to GitHub.
+2. Import the repo into Vercel.
+3. Confirm the framework preset is `Vite`.
+4. Confirm the build command is `npm run build` and the output directory is `dist`.
+5. Add your production domain in Vercel, then redeploy.
+
+### Post-launch recommendation
+
+After the production domain is live, update social preview metadata and structured data URLs in [index.html](index.html) if you want fully accurate shared links for Open Graph and search engines.

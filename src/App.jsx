@@ -81,7 +81,7 @@ function App() {
   return (
     <>
       <Navbar currentPath={currentPath} onNavigate={navigateTo} />
-      <div className="app" style={{ paddingTop: "72px" }}>
+      <div className="app app-shell">
         {pageContent}
         <Footer />
       </div>
